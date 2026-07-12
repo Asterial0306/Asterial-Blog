@@ -8,9 +8,11 @@ import Articles from "@/pages/Articles";
 import ArticleDetail from "@/pages/ArticleDetail";
 import About from "@/pages/About";
 
+const basename = process.env.NODE_ENV === 'production' ? '/Asterial-Blog' : '/';
+
 export default function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <Header />
       <main>
         <Routes>
