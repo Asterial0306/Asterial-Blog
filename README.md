@@ -1,57 +1,69 @@
-# React + TypeScript + Vite
+# 星渊博客
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+星渊的个人网站，展示B站视频文字稿、游戏测评与技术分享。
 
-Currently, two official plugins are available:
+## 技术栈
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + TypeScript
+- Vite 6
+- Tailwind CSS 3
+- React Router DOM 7
+- Lucide React
 
-## Expanding the ESLint configuration
+## 功能特性
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📺 视频列表与详情页
+- 📝 文章列表与详情页
+- 👤 关于页面
+- 📱 响应式设计
+- 🎨 B站主题配色
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 项目结构
+
+```
+src/
+├── components/          # 通用组件
+│   ├── Header.tsx       # 导航头部
+│   ├── Footer.tsx       # 页脚
+│   ├── VideoCard.tsx    # 视频卡片
+│   └── ArticleCard.tsx  # 文章卡片
+├── pages/               # 页面组件
+│   ├── Home.tsx         # 首页
+│   ├── Videos.tsx       # 视频列表
+│   ├── VideoDetail.tsx  # 视频详情
+│   ├── Articles.tsx     # 文章列表
+│   ├── ArticleDetail.tsx# 文章详情
+│   └── About.tsx        # 关于页面
+├── data/                # 静态数据
+│   ├── videos.ts        # 视频数据
+│   └── articles.ts      # 文章数据
+└── types/               # TypeScript类型定义
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 开发
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# 安装依赖
+npm install
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# 启动开发服务器
+npm run dev
+
+# 构建项目
+npm run build
+
+# 预览构建结果
+npm run preview
 ```
+
+## 部署
+
+项目通过 GitHub Actions 自动部署到 GitHub Pages。
+
+部署地址：https://asterial0306.github.io/Asterial-Blog/
+
+## 作者
+
+星渊 - B站UP主
+
+[B站空间](https://space.bilibili.com/645774959)
