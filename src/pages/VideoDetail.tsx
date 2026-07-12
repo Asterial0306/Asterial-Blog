@@ -2,6 +2,7 @@ import { ArrowLeft, Calendar, ExternalLink, Youtube } from 'lucide-react';
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { videos } from '../data/videos';
+import { getAssetUrl } from '../config/paths';
 
 const platformIcons: Record<string, React.ReactNode> = {
   B站: <Youtube className="w-5 h-5" />,
@@ -111,7 +112,7 @@ export default function VideoDetail() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-6 group cursor-pointer">
             <img
-              src={video.cover}
+              src={getAssetUrl(video.cover)}
               alt={video.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

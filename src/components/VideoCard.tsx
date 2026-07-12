@@ -1,6 +1,7 @@
 import { Play, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Video } from '../types';
+import { getAssetUrl } from '../config/paths';
 
 interface VideoCardProps {
   video: Video;
@@ -13,7 +14,7 @@ export default function VideoCard({ video }: VideoCardProps) {
         <div className="relative aspect-video overflow-hidden">
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
           <img
-            src={video.cover}
+            src={getAssetUrl(video.cover)}
             alt={video.title}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 relative z-10"
             loading="lazy"

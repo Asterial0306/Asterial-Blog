@@ -1,5 +1,6 @@
 import { Youtube } from 'lucide-react';
 import { useEffect } from 'react';
+import { getAssetUrl } from '../config/paths';
 
 export default function About() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function About() {
               <div className="w-64 h-64 mx-auto rounded-full bg-gray-100 p-2">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center shadow-sm">
                   <img
-                    src="/avatar.png"
+                    src={getAssetUrl('avatar.png')}
                     alt="头像"
                     className="w-56 h-56 rounded-full object-cover"
                   />
