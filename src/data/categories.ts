@@ -1,1 +1,1 @@
-export const categories = ['游戏测评', '蛋仔工坊教程'];
+export const categories = ['全部', '游戏测评', '蛋仔工坊教程'];

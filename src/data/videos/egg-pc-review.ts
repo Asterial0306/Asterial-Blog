@@ -3,7 +3,7 @@ import type { Video } from '../../types';
 export const video: Video = {
   id: '1',
   title: '测评：蛋仔派对PC | 只是一个残缺品',
-  description: '蛋仔派对原生PC版上线，体验如何？是否值得下载？',
+  description: '蛋仔派对原生 PC 版上线，帧率、键鼠适配都存在短板，内容也不完善，整体体验一般',
   cover: 'cover.jpg',
   category: '游戏测评',
   transcript: `手机一直是《蛋仔派对》的主流游玩平台。在过去，想要在电脑上玩这款游戏，唯一的办法就是在安卓模拟器中运行。而在2026年6月5日，官方终于发布了原生PC版，让玩家能够真正在电脑上体验《蛋仔派对》。那么，这款游戏在PC端的实际优化与运行表现究竟如何呢？
