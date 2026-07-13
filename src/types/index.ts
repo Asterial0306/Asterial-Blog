@@ -8,6 +8,7 @@ export interface Video {
   date: string;
   tags: string[];
   links: VideoLink[];
+  disclaimer?: string;
 }
 
 export interface VideoLink {

@@ -6,11 +6,13 @@ import ArticleCard from '../components/ArticleCard';
 import { videos } from '../data/videos';
 import { articles } from '../data/articles';
 
+const sortedVideos = [...videos].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 export default function Home() {
   useEffect(() => {
     document.title = '星渊博客';
   }, []);
-  const latestVideos = videos.slice(0, 3);
+  const latestVideos = sortedVideos.slice(0, 3);
   const latestArticles = articles.slice(0, 3);
 
   return (
@@ -20,7 +22,7 @@ export default function Home() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl font-bold text-gray-800">最新视频</h2>
-              <p className="text-gray-500 mt-1">探索最新的游戏测评和视频内容</p>
+              <p className="text-gray-500 mt-1">星渊的投稿视频</p>
             </div>
             <Link
               to="/videos"
@@ -53,7 +55,7 @@ export default function Home() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl font-bold text-gray-800">最新文章</h2>
-              <p className="text-gray-500 mt-1">深入阅读技术文章和学习笔记</p>
+              <p className="text-gray-500 mt-1">星渊的图文</p>
             </div>
             <Link
               to="/articles"

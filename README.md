@@ -22,22 +22,38 @@
 
 ```
 src/
-├── components/          # 通用组件
-│   ├── Header.tsx       # 导航头部
-│   ├── Footer.tsx       # 页脚
-│   ├── VideoCard.tsx    # 视频卡片
-│   └── ArticleCard.tsx  # 文章卡片
-├── pages/               # 页面组件
-│   ├── Home.tsx         # 首页
-│   ├── Videos.tsx       # 视频列表
-│   ├── VideoDetail.tsx  # 视频详情
-│   ├── Articles.tsx     # 文章列表
-│   ├── ArticleDetail.tsx# 文章详情
-│   └── About.tsx        # 关于页面
-├── data/                # 静态数据
-│   ├── videos.ts        # 视频数据
-│   └── articles.ts      # 文章数据
-└── types/               # TypeScript类型定义
+├── components/              # 通用组件
+│   ├── Icons/              # 自定义图标
+│   │   ├── BilibiliIcon.tsx
+│   │   ├── DouyinIcon.tsx
+│   │   └── XiguaIcon.tsx
+│   ├── Header.tsx          # 导航头部
+│   ├── Footer.tsx          # 页脚
+│   ├── VideoCard.tsx       # 视频卡片
+│   ├── ArticleCard.tsx     # 文章卡片
+│   ├── ProgressiveImage.tsx # 渐进式图片加载
+│   ├── MarkdownRenderer.tsx # Markdown渲染器
+│   ├── TableOfContents.tsx # 目录导航
+│   ├── ErrorBoundary.tsx   # 错误边界
+│   ├── LoadingSpinner.tsx  # 加载动画
+│   └── BackToTop.tsx       # 回到顶部
+├── pages/                  # 页面组件
+│   ├── Home.tsx            # 首页
+│   ├── Videos.tsx          # 视频列表
+│   ├── VideoDetail.tsx     # 视频详情
+│   ├── Articles.tsx        # 文章列表
+│   ├── ArticleDetail.tsx   # 文章详情
+│   └── About.tsx           # 关于页面
+├── data/                   # 静态数据
+│   ├── videos/             # 视频数据（按视频拆分）
+│   │   ├── index.ts        # 视频数据汇总
+│   │   ├── egg-pc-review.ts
+│   │   └── workshop-blocks.ts
+│   ├── articles.ts         # 文章数据
+│   └── categories.ts       # 分类数据
+├── config/                 # 配置文件
+│   └── paths.ts            # 路径配置
+└── types/                  # TypeScript类型定义
 ```
 
 ## 开发

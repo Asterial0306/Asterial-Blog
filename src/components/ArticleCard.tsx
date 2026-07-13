@@ -1,6 +1,6 @@
 import { Calendar, Tag } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Article } from '../types';
+import type { Article } from '../types';
 
 interface ArticleCardProps {
   article: Article;

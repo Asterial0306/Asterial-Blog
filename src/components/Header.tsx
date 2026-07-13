@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Youtube } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { NavItem } from '../types';
+import type { NavItem } from '../types';
+import { getAssetUrl } from '../config/paths';
 
 const navItems: NavItem[] = [
   { label: '首页', href: '/' },
@@ -11,17 +12,8 @@ const navItems: NavItem[] = [
 ];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header
@@ -30,8 +22,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bilibili-pink-bg flex items-center justify-center transition-transform group-hover:scale-110">
-              <Youtube className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-110">
+              <img src={getAssetUrl('icon.png')} alt="星渊博客" className="w-full h-full object-cover" />
             </div>
             <span
               className="text-xl font-bold text-bilibili-pink"

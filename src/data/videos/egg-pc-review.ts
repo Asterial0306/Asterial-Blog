@@ -1,13 +1,12 @@
-import { Video } from '../types';
+import type { Video } from '../../types';
 
-export const videos: Video[] = [
-  {
-    id: '1',
-    title: '测评：蛋仔派对PC | 只是一个残缺品',
-    description: '蛋仔派对原生 PC 版上线，帧率、键鼠适配都存在短板，内容也不完善，整体体验一般',
-    cover: 'cover.jpg',
-    category: '游戏测评',
-    transcript: `手机一直是《蛋仔派对》的主流游玩平台。在过去，想要在电脑上玩这款游戏，唯一的办法就是在安卓模拟器中运行。而在2026年6月5日，官方终于发布了原生PC版，让玩家能够真正在电脑上体验《蛋仔派对》。那么，这款游戏在PC端的实际优化与运行表现究竟如何呢？
+export const video: Video = {
+  id: '1',
+  title: '测评：蛋仔派对PC | 只是一个残缺品',
+  description: '蛋仔派对原生PC版上线，体验如何？是否值得下载？',
+  cover: 'cover.jpg',
+  category: '游戏测评',
+  transcript: `手机一直是《蛋仔派对》的主流游玩平台。在过去，想要在电脑上玩这款游戏，唯一的办法就是在安卓模拟器中运行。而在2026年6月5日，官方终于发布了原生PC版，让玩家能够真正在电脑上体验《蛋仔派对》。那么，这款游戏在PC端的实际优化与运行表现究竟如何呢？
 
 ## 画质与帧率表现：令人失望的短板
 
@@ -39,17 +38,14 @@ export const videos: Video[] = [
 
 当然，这仅仅是《蛋仔派对》PC端的首个正式版本，存在短板与缺陷情有可原。游戏的端游体验上限，依旧需要等待后续版本的迭代打磨。
 
-综合得分：6/10 | 差强人意
+**综合得分：6/10 | 差强人意**
 
-游玩建议： 现阶段优先使用安卓模拟器游玩，等后续多轮版本迭代优化后再考虑原生PC端。`,
-    
-    date: '2026-06-07',
-    tags: ['游戏测评', '蛋仔派对', 'PC版', '体验'],
-    links: [
-      { platform: 'B站', url: 'https://www.bilibili.com/video/BV1GuEt61Enh', icon: 'bilibili' },
-      { platform: '抖音', url: 'https://v.douyin.com/OxS1T53_dlg', icon: 'douyin' }
-    ]
-  }
-];
-
-export const categories = ['全部', '技术分享', '学习教程', '经验总结', '游戏测评'];
+**游玩建议：** 现阶段优先使用安卓模拟器游玩，等后续多轮版本迭代优化后再考虑原生PC端。`,
+  date: '2026-06-07',
+  tags: ['游戏测评', '蛋仔派对', 'PC版', '体验'],
+  links: [
+    { platform: 'B站', url: 'https://space.bilibili.com/645774959', icon: 'bilibili' },
+    { platform: '抖音', url: 'https://v.douyin.com/OxS1T53_dlg', icon: 'douyin' }
+  ],
+  disclaimer: '个人观点，仅供参考'
+};

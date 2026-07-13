@@ -1,6 +1,7 @@
-import { Youtube } from 'lucide-react';
 import { useEffect } from 'react';
 import { getAssetUrl } from '../config/paths';
+import DouyinIcon from '../components/Icons/DouyinIcon';
+import BilibiliIcon from '../components/Icons/BilibiliIcon';
 
 export default function About() {
   useEffect(() => {
@@ -40,7 +41,15 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-bilibili-pink/10 flex items-center justify-center hover:bg-bilibili-pink/20 transition-colors"
                 >
-                  <Youtube className="w-6 h-6 text-bilibili-pink" />
+                  <BilibiliIcon className="w-6 h-6 text-bilibili-pink" />
+                </a>
+                <a
+                  href="https://v.douyin.com/dlw52HSZrxI/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-bilibili-pink/10 flex items-center justify-center hover:bg-bilibili-pink/20 transition-colors"
+                >
+                  <DouyinIcon className="w-6 h-6 text-bilibili-pink" />
                 </a>
               </div>
             </div>

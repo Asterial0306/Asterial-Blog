@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import VideoCard from '../components/VideoCard';
 import { videos } from '../data/videos';
 
+const sortedVideos = [...videos].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 export default function Videos() {
   const [showBackTop, setShowBackTop] = useState(false);
 
@@ -45,7 +47,7 @@ export default function Videos() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xl font-semibold text-gray-800">
-              共 {videos.length} 个视频
+              共 {sortedVideos.length} 个视频
             </h2>
           </div>
 
@@ -66,7 +68,7 @@ export default function Videos() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {videos.map((video) => (
+              {sortedVideos.map((video) => (
                 <VideoCard key={video.id} video={video} />
               ))}
             </div>
